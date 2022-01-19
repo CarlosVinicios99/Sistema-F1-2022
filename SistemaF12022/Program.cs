@@ -1,6 +1,4 @@
-﻿using System;
-
-using SistemaF12022.Views;
+﻿using SistemaF12022.Views;
 
 namespace SistemaF12022
 {

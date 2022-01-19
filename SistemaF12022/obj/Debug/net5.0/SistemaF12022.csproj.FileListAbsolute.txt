@@ -1,0 +1,16 @@
+/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/bin/Debug/net5.0/SistemaF12022
+/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/bin/Debug/net5.0/SistemaF12022.deps.json
+/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/bin/Debug/net5.0/SistemaF12022.runtimeconfig.json
+/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/bin/Debug/net5.0/SistemaF12022.runtimeconfig.dev.json
+/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/bin/Debug/net5.0/SistemaF12022.dll
+/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/bin/Debug/net5.0/ref/SistemaF12022.dll
+/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/bin/Debug/net5.0/SistemaF12022.pdb
+/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/obj/Debug/net5.0/SistemaF12022.csproj.AssemblyReference.cache
+/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/obj/Debug/net5.0/SistemaF12022.GeneratedMSBuildEditorConfig.editorconfig
+/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/obj/Debug/net5.0/SistemaF12022.AssemblyInfoInputs.cache
+/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/obj/Debug/net5.0/SistemaF12022.AssemblyInfo.cs
+/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/obj/Debug/net5.0/SistemaF12022.csproj.CoreCompileInputs.cache
+/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/obj/Debug/net5.0/SistemaF12022.dll
+/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/obj/Debug/net5.0/ref/SistemaF12022.dll
+/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/obj/Debug/net5.0/SistemaF12022.pdb
+/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/obj/Debug/net5.0/SistemaF12022.genruntimeconfig.cache
