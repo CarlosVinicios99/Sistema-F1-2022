@@ -44,9 +44,9 @@ namespace SistemaF12022.Entities
         {
             if(!(obj is Equipe))
             {
-                throw new ArgumentException("Comparing error: O Argumento nao eh uma um objeto equipe");
+                throw new ArgumentException("Comparing error: O Argumento nao eh um objeto equipe");
             }
-            
+
             Equipe equipe = (Equipe) obj;
             return Pontos.CompareTo(equipe.Pontos);
         }
