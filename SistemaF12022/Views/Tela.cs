@@ -1,10 +1,10 @@
 using System;
-
+using SistemaF12022.Entities;
 namespace SistemaF12022.Views
 {
     class Tela
     {
-        //declarar um objeto controlador para indicar as operacoes
+        private Temporada _temporada = new Temporada();
         public Tela()
         {
             cicloDoSistema();
