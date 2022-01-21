@@ -10,21 +10,19 @@ namespace SistemaF12022.Entities
         public int Pontos {get; private set;}
         public int Vitorias {get; private set;}
         public int Podios {get; private set;}
-        public Equipe Equipe {get; set;}
 
         public Piloto()
         {
 
         }
 
-        public Piloto(string nome, int numero, int pontos, int vitorias, int podios, Equipe equipe)
+        public Piloto(string nome, int numero, int pontos, int vitorias, int podios)
         {
             Nome = nome;
             Numero = numero;
             Pontos = pontos;
             Vitorias = vitorias;
             Podios = podios;
-            Equipe = equipe;
         }
 
         public void AtualizarPontuacao(int pontosGanhos)
