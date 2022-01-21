@@ -89,7 +89,7 @@ namespace SistemaF12022.Repositories
             }
         }
 
-        private static void SalvarDadosTemporada(List<Equipe> equipes)
+        public static void SalvarDadosTemporada(List<Equipe> equipes)
         {
             //utilizar streamWriter para gravar os dados da temporada
         }

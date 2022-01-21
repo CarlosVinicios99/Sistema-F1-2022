@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace SistemaF12022.Entities
 {
@@ -9,22 +10,22 @@ namespace SistemaF12022.Entities
         {
             
         }
-        public override void DistribuirPontos()
+        public override void DistribuirPontos(List<Piloto> pilotos)
         {
-            Console.WriteLine("f");
+            //adicionar os pontos para os 10 primeiros
         }
 
-        public void PontuarMelhorVolta(Piloto piloto)
+        public void PontuarMelhorVolta(List<Piloto> pilotos, string nomePiloto)
         {
-            //usar o list find encontrar o piloto e dar o ponto
+            //adicionar o ponto de melhor volta
         }
 
-        public void ContabilizarVitoria()
+        public void ContabilizarVitoria(List<Piloto> pilotos)
         {
-            //aumentar o numero de vitoria
+            //aumentar o numero de vitorias do vencedor da corrida
         }
         
-        public void ContabilizarPodios()
+        public void ContabilizarPodios(List<Piloto> pilotos)
         {
             //aumentar podio dos 3 primeiros
         }

@@ -9,7 +9,7 @@ namespace SistemaF12022.Entities
     {
         private List<Equipe> _equipes = new List<Equipe>();
         private List<Piloto> _pilotos = new List<Piloto>();
-        private Corrida _novaCorrida;
+        private List<Corrida> _corridas = new List<Corrida>();
 
         public Temporada()
         {
@@ -44,6 +44,45 @@ namespace SistemaF12022.Entities
             }
         }
         
-        //metodo para criar nova corrida
+        public void CriarCorrida(int tipoCorrida, string local, string[] nomes, string pilotoVoltaMaisRapida)
+        {
+            if(tipoCorrida == 1)
+            {
+                 CorridaDeDomingo corridaDeDomingo = new CorridaDeDomingo(local);
+
+                foreach(string nome in nomes)
+                {
+                    corridaDeDomingo.adicionarAoGridFinal(nome);
+                }
+
+                _corridas.Add(corridaDeDomingo);
+
+                corridaDeDomingo.DistribuirPontos(_pilotos);
+                corridaDeDomingo.PontuarMelhorVolta(_pilotos, pilotoVoltaMaisRapida);
+                corridaDeDomingo.ContabilizarVitoria(_pilotos);
+                corridaDeDomingo.ContabilizarPodios(_pilotos);
+            }
+
+            else
+            {
+                CorridaSprint corridaSprint = new CorridaSprint(local);
+                foreach(string nome in nomes)
+                {
+                    corridaSprint.adicionarAoGridFinal(nome);
+                }
+
+                _corridas.Add(corridaSprint);
+                corridaSprint.DistribuirPontos(_pilotos);
+            }
+
+            foreach(Equipe equipe in _equipes)
+            {
+                //testat se isso funciona
+                equipe.AtualizarPontuacao();
+            }
+
+            //gravar os dados atualizados no fim do metodo
+            ManipulaDados.SalvarDadosTemporada(_equipes);
+        }
     }
 }

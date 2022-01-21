@@ -5,7 +5,7 @@ namespace SistemaF12022.Entities
     abstract class Corrida
     {
         public string Local {get; set;}
-        protected List<Piloto> GridFinal;
+        protected List<string> GridFinal;
 
         public Corrida()
         {
@@ -15,13 +15,13 @@ namespace SistemaF12022.Entities
         public Corrida(string local)
         {
             Local = local;
-            GridFinal = new List<Piloto>();
+            GridFinal = new List<string>();
         }
 
-        public void adicionarAoGridFinal(Piloto piloto)
+        public void adicionarAoGridFinal(string nomePiloto)
         {
-            GridFinal.Add(piloto);
+            GridFinal.Add(nomePiloto);
         }
-        public abstract void DistribuirPontos();
+        public abstract void DistribuirPontos(List<Piloto> pilotos);
     }
 }

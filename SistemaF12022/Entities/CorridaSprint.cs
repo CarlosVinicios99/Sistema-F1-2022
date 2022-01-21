@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace SistemaF12022.Entities
 {
     class CorridaSprint : Corrida
@@ -14,9 +16,8 @@ namespace SistemaF12022.Entities
 
         }
         
-        public override void DistribuirPontos()
+        public override void DistribuirPontos(List<Piloto> pilotos)
         {
-            throw new System.NotImplementedException();
             //distribuir pontos para os 3 primeiros
         }
     }
