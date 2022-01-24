@@ -77,11 +77,9 @@ namespace SistemaF12022.Entities
 
             foreach(Equipe equipe in _equipes)
             {
-                //testat se isso funciona
                 equipe.AtualizarPontuacao();
             }
 
-            //gravar os dados atualizados no fim do metodo
             ManipulaDados.SalvarDadosTemporada(_equipes);
         }
     }

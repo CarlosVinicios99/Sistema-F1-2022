@@ -91,7 +91,28 @@ namespace SistemaF12022.Repositories
 
         public static void SalvarDadosTemporada(List<Equipe> equipes)
         {
-            //utilizar streamWriter para gravar os dados da temporada
+            string path = "/home/carlos/Documentos/C#/Projetos/Sistema-F1-2022/SistemaF12022/Repositories/Arquivos/dadosTemporada.csv";
+
+            try
+            {
+                using(StreamWriter sw = File.CreateText(path))
+                {
+                    foreach(Equipe equipe in equipes)
+                    {
+                        sw.Write(equipe.Nome + "," + equipe.Pilotos[0].Numero + ",");
+                        sw.Write(equipe.Pilotos[0].Nome + "," + equipe.Pilotos[0].Pontos + ",");
+                        sw.Write(equipe.Pilotos[0].Vitorias + "," + equipe.Pilotos[0].Podios + ",");
+                        sw.Write(equipe.Pilotos[1].Numero + "," + equipe.Pilotos[1].Nome + ",");
+                        sw.Write(equipe.Pilotos[1].Pontos + "," + equipe.Pilotos[1].Vitorias + ",");
+                        sw.WriteLine(equipe.Pilotos[1].Podios);
+                    }
+                }
+            }
+
+            catch(IOException e)
+            {
+                Console.WriteLine("Erro de escrita: problema ao gravar dados " + e.Message);
+            }
         }
 
     }
