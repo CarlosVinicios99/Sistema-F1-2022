@@ -8,7 +8,7 @@ namespace SistemaF12022.Entities
     class Temporada
     {
         private List<Equipe> _equipes = new List<Equipe>();
-        private List<Piloto> _pilotos = new List<Piloto>();
+        public List<Piloto> Pilotos {get; private set;} = new List<Piloto>();
         private List<Corrida> _corridas = new List<Corrida>();
 
         public Temporada()
@@ -21,15 +21,15 @@ namespace SistemaF12022.Entities
         {
             foreach(Equipe equipe in _equipes)
             {
-                _pilotos.Add(equipe.Pilotos[0]);
-                _pilotos.Add(equipe.Pilotos[1]);
+                Pilotos.Add(equipe.Pilotos[0]);
+                Pilotos.Add(equipe.Pilotos[1]);
             }
         } 
 
         public void ExibirClassificacaoMundialDePilotos()
         {
-            _pilotos.Sort();
-            foreach(Piloto piloto in _pilotos)
+            Pilotos.Sort();
+            foreach(Piloto piloto in Pilotos)
             {
                 Console.WriteLine(piloto);
             }
@@ -48,7 +48,7 @@ namespace SistemaF12022.Entities
         {
             if(tipoCorrida == 1)
             {
-                 CorridaDeDomingo corridaDeDomingo = new CorridaDeDomingo(local);
+                CorridaDeDomingo corridaDeDomingo = new CorridaDeDomingo(local);
 
                 foreach(string nome in nomes)
                 {
@@ -57,10 +57,10 @@ namespace SistemaF12022.Entities
 
                 _corridas.Add(corridaDeDomingo);
 
-                corridaDeDomingo.DistribuirPontos(_pilotos);
-                corridaDeDomingo.PontuarMelhorVolta(_pilotos, pilotoVoltaMaisRapida);
-                corridaDeDomingo.ContabilizarVitoria(_pilotos);
-                corridaDeDomingo.ContabilizarPodios(_pilotos);
+                corridaDeDomingo.DistribuirPontos(Pilotos);
+                corridaDeDomingo.PontuarMelhorVolta(Pilotos, pilotoVoltaMaisRapida);
+                corridaDeDomingo.ContabilizarVitoria(Pilotos);
+                corridaDeDomingo.ContabilizarPodios(Pilotos);
             }
 
             else
@@ -72,14 +72,16 @@ namespace SistemaF12022.Entities
                 }
 
                 _corridas.Add(corridaSprint);
-                corridaSprint.DistribuirPontos(_pilotos);
+                corridaSprint.DistribuirPontos(Pilotos);
             }
 
             foreach(Equipe equipe in _equipes)
             {
-                equipe.AtualizarPontuacao();
+                int pontos = Pilotos.Find(p => p.Numero == equipe.Pilotos[0].Numero).Pontos;
+                pontos += Pilotos.Find(p => p.Numero == equipe.Pilotos[1].Numero).Pontos;
+                equipe.AtualizarPontuacao(pontos);
             }
-
+            
             ManipulaDados.SalvarDadosTemporada(_equipes);
         }
     }

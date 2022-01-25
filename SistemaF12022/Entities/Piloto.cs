@@ -50,7 +50,7 @@ namespace SistemaF12022.Entities
             sb.Append(Vitorias);
             sb.Append(" vitorias, ");
             sb.Append(Podios);
-            sb.AppendLine(" podios");
+            sb.Append(" podios");
 
             return sb.ToString();
         }
@@ -63,7 +63,7 @@ namespace SistemaF12022.Entities
             }
 
             Piloto piloto = (Piloto) obj;
-            return Pontos.CompareTo(piloto.Pontos);
+            return piloto.Pontos.CompareTo(Pontos);
         }
     }
 }

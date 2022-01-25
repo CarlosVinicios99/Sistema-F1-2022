@@ -24,9 +24,9 @@ namespace SistemaF12022.Entities
             Pontos = pontos;
         }
 
-        public void AtualizarPontuacao()
+        public void AtualizarPontuacao(int pontos)
         {
-            Pontos = Pilotos[0].Pontos + Pilotos[1].Pontos;
+            Pontos += pontos;
         }
 
         public override string ToString()
@@ -35,7 +35,7 @@ namespace SistemaF12022.Entities
            sb.Append(Nome);
            sb.Append(" ");
            sb.Append(Pontos);
-           sb.AppendLine(" pontos"); 
+           sb.Append(" pontos"); 
 
            return sb.ToString();
         }
@@ -48,7 +48,7 @@ namespace SistemaF12022.Entities
             }
 
             Equipe equipe = (Equipe) obj;
-            return Pontos.CompareTo(equipe.Pontos);
+            return equipe.Pontos.CompareTo(Pontos);
         }
     }
 }

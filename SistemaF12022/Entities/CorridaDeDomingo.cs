@@ -73,7 +73,7 @@ namespace SistemaF12022.Entities
         {
             for(int i = 0; i < 3; i++)
             {
-                pilotos.Find(p => p.Nome.ToUpper().Equals(GridFinal[0].ToUpper())).AtualizarPodios();
+                pilotos.Find(p => p.Nome.ToUpper().Equals(GridFinal[i].ToUpper())).AtualizarPodios();
             }
         }
     }

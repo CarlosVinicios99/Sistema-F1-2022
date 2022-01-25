@@ -40,8 +40,9 @@ namespace SistemaF12022.Repositories
                             Piloto piloto1 = new Piloto(nomePiloto1, numeroPiloto1, pontosPiloto1, vitoriasPiloto1, podiosPiloto1);
 
                             Piloto piloto2 = new Piloto(nomePiloto2, numeroPiloto2, pontosPiloto2, vitoriasPiloto2, podiosPiloto2);
-
-                            equipes.Add(new Equipe(nomeEquipe, 0, piloto1, piloto2));
+                            Equipe equipe = new Equipe(nomeEquipe, 0, piloto1, piloto2);
+                            equipe.AtualizarPontuacao(piloto1.Pontos + piloto2.Pontos);
+                            equipes.Add(equipe);
                         }
                     }
                 }
