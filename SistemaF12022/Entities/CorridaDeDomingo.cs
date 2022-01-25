@@ -12,7 +12,51 @@ namespace SistemaF12022.Entities
         }
         public override void DistribuirPontos(List<Piloto> pilotos)
         {
-            //adicionar os pontos para os 10 primeiros
+            for(int i = 0; i < 10; i++)
+            {
+                switch(i)
+                {
+                    case 0:
+                        pilotos.Find(p => p.Nome.ToUpper().Equals(GridFinal[i].ToUpper())).AtualizarPontuacao(25);
+                        break;
+
+                    case 1:
+                        pilotos.Find(p => p.Nome.ToUpper().Equals(GridFinal[i].ToUpper())).AtualizarPontuacao(18);
+                        break;
+
+                    case 2:
+                        pilotos.Find(p => p.Nome.ToUpper().Equals(GridFinal[i].ToUpper())).AtualizarPontuacao(15);
+                        break;
+
+                    case 3:
+                        pilotos.Find(p => p.Nome.ToUpper().Equals(GridFinal[i].ToUpper())).AtualizarPontuacao(12);
+                        break;
+
+                    case 4:
+                        pilotos.Find(p => p.Nome.ToUpper().Equals(GridFinal[i].ToUpper())).AtualizarPontuacao(10);
+                        break;
+
+                    case 5:
+                        pilotos.Find(p => p.Nome.ToUpper().Equals(GridFinal[i].ToUpper())).AtualizarPontuacao(8);
+                        break;
+
+                    case 6:
+                        pilotos.Find(p => p.Nome.ToUpper().Equals(GridFinal[i].ToUpper())).AtualizarPontuacao(6);
+                        break;
+
+                    case 7:
+                        pilotos.Find(p => p.Nome.ToUpper().Equals(GridFinal[i].ToUpper())).AtualizarPontuacao(4);
+                        break;
+
+                    case 8:
+                        pilotos.Find(p => p.Nome.ToUpper().Equals(GridFinal[i].ToUpper())).AtualizarPontuacao(2);
+                        break;
+
+                    case 9:
+                        pilotos.Find(p => p.Nome.ToUpper().Equals(GridFinal[i].ToUpper())).AtualizarPontuacao(1);
+                        break;
+                }
+            }
         }
 
         public void PontuarMelhorVolta(List<Piloto> pilotos, string nomePiloto)
@@ -22,12 +66,15 @@ namespace SistemaF12022.Entities
 
         public void ContabilizarVitoria(List<Piloto> pilotos)
         {
-            //
+            pilotos.Find(p => p.Nome.ToUpper().Equals(GridFinal[0].ToUpper())).AtualizarVitorias();
         }
         
         public void ContabilizarPodios(List<Piloto> pilotos)
         {
-            //aumentar podio dos 3 primeiros
+            for(int i = 0; i < 3; i++)
+            {
+                pilotos.Find(p => p.Nome.ToUpper().Equals(GridFinal[0].ToUpper())).AtualizarPodios();
+            }
         }
     }
 }

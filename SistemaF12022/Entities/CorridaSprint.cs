@@ -18,7 +18,10 @@ namespace SistemaF12022.Entities
         
         public override void DistribuirPontos(List<Piloto> pilotos)
         {
-            //distribuir pontos para os 3 primeiros
+            for(int i = 0; i < 3; i++)
+            {
+                pilotos.Find(p => p.Nome.ToUpper().Equals(GridFinal[i].ToUpper())).AtualizarPontuacao(3 - i);
+            }
         }
     }
 }
